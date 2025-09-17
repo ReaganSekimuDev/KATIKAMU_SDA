@@ -8,7 +8,7 @@ app.use(cors())
 app.use(express.json())
 
 let db 
-let port = 7000
+let port = process.env.PORT || 7000
 connectToDB((err) => {
     if (!err) {
         app.listen(port, () => console.log(`Server running on port: ${port}`))
