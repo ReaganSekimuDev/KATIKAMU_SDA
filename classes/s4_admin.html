@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../badge.png" type="image/png">
+    <link rel="stylesheet" href="../admin.css">
+    <title>ADMIN-PORTAL => Form_4</title>
+</head>
+<body>
+    <div class="menue">
+        <nav>
+            <a href="s1_admin.html" ><button>Form 1</button></a>
+            <a href="s2_admin.html"><button>Form 2</button></a>
+            <a href="s3_admin.html"><button>Form 3</button></a>
+            <a href="s4_admin.html"><button style="border-bottom: 4px solid rgb(10, 227, 243); border-left: 4px solid rgb(243, 200, 10);">Form 4</button></a>
+        </nav>
+    </div>
+    <header>
+        
+        <section>
+            <h1>KATIKAMU SDA KAKOOGE</h1>
+            <h2>Reporting System</h2>
+            <h3>ADMIN Portal</h3>
+        </section>
+        <section id="badge">
+            <h2>Form IV</h2>
+            <a href="../index.html"> <img src="../badge.png" alt=""></a>
+            </section>
+            
+    </header>
+    
+    <div class="tabSection">
+        <div class="tab-Section">
+            <input type="text" placeholder="Q Search..." id="searchInput">
+            <select id="select">
+            <option value="">Subject</option>
+            <option value="phy">Physics</option>
+            <option value="chem">Chemistry</option>
+            <option value="maths">Mathematics</option>
+            <option value="bio">Biology</option>
+            <option value="geog">Geography</option>
+            <option value="his">History</option>
+            <option value="ict">ICT</option>
+            <option value="ent">Entreprenuership</option>
+        <option value="agric">Agriculture</option>
+        <option value="cre">C.R.E</option>
+        <option value="ire">I.R.E</option>
+        <option value="pe">P.E</option>
+        <option value="kis">Kiswahili</option>
+    </select>
+    <!-- <button onclick="Add()">Add Student</button> -->
+            <button style="background: rgb(4, 153, 123);" id="printBtn" class="switchBtn" onclick="switchPortalT()"> <a id="switchPortal">Teacher's Portal</a></button>
+            Sort By <select name="" id="selectFilter">
+        <option value="">Select</option>
+        <option value="name">Name [A-Z]</option>
+        <option value="phy">Physics</option>
+        <option value="chem">Chemistry</option>
+        <option value="maths">Mathematics</option>
+        <option value="bio">Biology</option>
+        <option value="geog">Geography</option>
+        <option value="his">History</option>
+        <option value="ict">ICT</option>
+        <option value="ent">Entreprenuership</option>
+        <option value="agric">Agriculture</option>
+        <option value="cre">C.R.E</option>
+        <option value="ire">I.R.E</option>
+        <option value="pe">P.E</option>
+        <option value="kis">Kiswahili</option>
+    </select>
+            <button id="printBtn" onclick="printAll()">Print All</button>
+            <button id="printBtn" onclick="Refresh()">Refresh</button>
+            
+        </div>
+    </div>
+<main>
+    <div class="card">
+        <section id="sec">
+            <img src="../close-1.png" class="icon" id="closeReportCard" onclick="closeReport()" />
+            <img src="../printer.png" class="icon" id="printReportCard" onclick="printCard()" />
+        </section>
+        <div class="reportDV">
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="wrap">
+            <div class="box">
+                <div id="box-1">
+                    <h2 id="data">Enter Input</h2>
+                    <img src="../close.png" class="icon" id="closeIcon" onclick="Can()">
+                </div>
+                <div id="box-2">
+                    <div id="box-2-1">
+                        <img src="" alt="">
+                    </div>
+                    <div id="box-2-2">
+                        <input type="text" name="" id="nameTxt" placeholder="Name....">
+                        <section class="Subject" id="phySection">
+                            <h3>Physics Scores</h3>
+                            <input type="text" id="phyTxt1">
+                            <input type="text" id="phyTxt2">
+                        </section>
+                        <section class="Subject" id="chemSection">
+                            <h3>Chemistry Scores</h3>
+                            <input type="text" id="chemTxt1">
+                            <input type="text" id="chemTxt2">
+                        </section>
+                        <section class="Subject" id="mathsSection">
+                            <h3>Mathematics Scores</h3>
+                            <input type="text" id="mathsTxt1">
+                        </section>
+                        <section class="Subject" id="bioSection">
+                            <h3>Biology Scores</h3>
+                            <input type="text" id="bioTxt1">
+                            <input type="text" id="bioTxt2">
+                        </section>
+                        <section class="Subject" id="geogSection">
+                            <h3>Geography Scores</h3>
+                            <input type="text" id="geogTxt1">
+                        </section>
+                        <section class="Subject" id="hisSection">
+                            <h3>History Scores</h3>
+                            <input type="text" id="hisTxt1">
+                        </section>
+                        <section class="Subject" id="ictSection">
+                            <h3>ICT Scores</h3>
+                            <input type="text" id="ictTxt1">
+                            <input type="text" id="ictTxt2">
+                        </section>
+                        <section class="Subject" id="entSection">
+                            <h3>Entreprenuership Scores</h3>
+                            <input type="text" id="entTxt1">
+                        </section>
+                        <section class="Subject" id="agricSection">
+                            <h3>Agriculture Scores</h3>
+                            <input type="text" id="agricTxt1">
+                            <input type="text" id="agricTxt2">
+                        </section>
+                        <section class="Subject" id="creSection">
+                            <h3>C.R.E Scores</h3>
+                            <input type="text" id="creTxt1">
+                        </section>
+                        <section class="Subject" id="ireSection">
+                            <h3>I.R.E Scores</h3>
+                            <input type="text" id="ireTxt1">
+                        </section>
+                        <section class="Subject" id="peSection">
+                            <h3>P.E Scores</h3>
+                            <input type="text" id="peTxt1">
+                            <input type="text" id="peTxt2">
+                        </section>
+                        <section class="Subject" id="swahiliSection">
+                            <h3>Kiswahili Scores</h3>
+                            <input type="text" id="kisTxt1" placeholder="Scores">
+                        </section>
+                        <div class="btns">
+                            <button onclick="Clr()" id="ClrBtn">Clear</button>
+                            <button onclick="Sav()" id="SavBtn">Save</button>
+                            <button onclick="Update()" id="UpdateBtn" style="display: none;">Update</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<table border>
+    <thead id="thd">
+        <tr>
+            <th>No.</th>
+            <th>ID_No.</th>
+            <th id="nameTH">Name</th>
+            <th>Physics</th>
+            <th>Chemistry</th>
+            <th>Maths</th>
+            <th>Biology</th>
+            <th>Geog</th>
+            <th>History</th>
+            <th>ICT</th>
+            <th>Ent</th>
+            <th>Agric</th>
+            <th>C.R.E</th>
+            <th>I.R.E</th>
+            <th>P.E</th>
+            <th>Kiswahili</th>
+            <th>Action_Btn</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table>
+
+</main>
+    <script src="s4_admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="badge.png" type="image/png">
+    <link rel="stylesheet" href="index.css">
+    <title>STUDENTS REPORT SYSTEM</title>
+</head>
+<body>
+    <header>
+        <section>
+            <h1>KATIKAMU SDA KAKOOGE</h1>
+            <h2>Reporting System</h2>
+            <section id="badge">
+                <img src="badge.jpeg" alt="">
+            </section>
+        </section>
+        <div class="portals">
+
+            <section id="Tportal" class="portal">
+                <a href="teachers.html"><button> Teachers' portal</button></a>
+            </section>
+            <section id="Aportal" class="portal">
+                <button onclick="AdminLogin()">Admin Portal</button>
+                <div class="loginsDetails">
+                    <input type="text" id="userName" placeholder="User Name">
+                    <br>
+                    <input type="password" id="Password" placeholder="Password">
+                    <br>
+                    <span id="wrong">wrong <i><b>Password </b></i> or <b> <i>user nname </i></b></span>
+                    <br>
+                    <button onclick="logIn()">Login</button>
+                </div>
+            </section>
+        </div>
+</header>
+<script src="index.js"></script>
+</body>
+</html>
